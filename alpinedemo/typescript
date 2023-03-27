@@ -1,515 +1,0 @@
-Script started on 2023-03-26 15:54:43-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="148" LINES="44"]
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ script.sh
-[?2004lscript.sh: command not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmode +x script.h[Ksh[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kprin[K[K[K[Kls -s[Kl
-[?2004ltotal 12
--rw-r--r-- 1 nejimon nejimon 677 Mar 26 15:49 Dockerfile
--rw-r--r-- 1 nejimon nejimon   8 Mar 26 15:54 script.sh
--rw-r--r-- 1 nejimon nejimon  27 Mar 26 14:25 testfile.txt
--rw-r--r-- 1 nejimon nejimon   0 Mar 26 15:54 typescript
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmod --help
-[?2004lUsage: chmod [OPTION]... MODE[,MODE]... FILE...
-  or:  chmod [OPTION]... OCTAL-MODE FILE...
-  or:  chmod [OPTION]... --reference=RFILE FILE...
-Change the mode of each FILE to MODE.
-With --reference, change the mode of each FILE to that of RFILE.
-
-  -c, --changes          like verbose but report only when a change is made
-  -f, --silent, --quiet  suppress most error messages
-  -v, --verbose          output a diagnostic for every file processed
-      --no-preserve-root  do not treat '/' specially (the default)
-      --preserve-root    fail to operate recursively on '/'
-      --reference=RFILE  use RFILE's mode instead of MODE values
-  -R, --recursive        change files and directories recursively
-      --help     display this help and exit
-      --version  output version information and exit
-
-Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
-
-GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
-Report any translation bugs to <https://translationproject.org/team/>
-Full documentation <https://www.gnu.org/software/coreutils/chmod>
-or available locally via: info '(coreutils) chmod invocation'
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmode [K[K +x script.sh
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmod +x script.sh[6P--help[7Pls -l
-[?2004ltotal 12
--rw-r--r-- 1 nejimon nejimon 677 Mar 26 15:49 Dockerfile
--rwxr-xr-x 1 nejimon nejimon   8 Mar 26 15:54 [0m[01;32mscript.sh[0m
--rw-r--r-- 1 nejimon nejimon  27 Mar 26 14:25 testfile.txt
--rw-r--r-- 1 nejimon nejimon   0 Mar 26 15:54 typescript
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ script.sh
-[?2004lscript.sh: command not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ ./script.sh
-[?2004lSHELL=/bin/bash
-WSL2_GUI_APPS_ENABLED=1
-WSL_DISTRO_NAME=Ubuntu-22.04
-WT_SESSION=659332cf-20c6-440f-b045-480cc1864719
-DOTNET_ROOT=/usr/lib/dotnet
-NAME=NejSurfacePro
-PWD=/home/nejimon/myfiles/temp/dockertest
-LOGNAME=nejimon
-_=/usr/bin/printenv
-MOTD_SHOWN=update-motd
-HOME=/home/nejimon
-LANG=C.UTF-8
-WSL_INTEROP=/run/WSL/9_interop
-LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-WAYLAND_DISPLAY=wayland-0
-DOTNET_BUNDLE_EXTRACT_BASE_DIR=/home/nejimon/.cache/dotnet_bundle_extract
-LESSCLOSE=/usr/bin/lesspipe %s %s
-TERM=xterm-256color
-LESSOPEN=| /usr/bin/lesspipe %s
-USER=nejimon
-DISPLAY=:0
-SHLVL=3
-XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
-WSLENV=WT_SESSION::WT_PROFILE_ID
-XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Microsoft SDKs/Azure/CLI2/wbin:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/qemu:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/_MyFiles/Software/ffmpeg/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/nejim/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nejim/.dotnet/tools:/mnt/c/Users/nejim/AppData/Roaming/npm:/mnt/c/Users/nejim/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/nejimon/.dotnet/tools
-HOSTTYPE=x86_64
-PULSE_SERVER=unix:/mnt/wslg/PulseServer
-WT_PROFILE_ID={d7b20cea-47a9-518c-95a4-c8bd91e2e1c6}
-OLDPWD=/home/nejimon/myfiles/temp
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ clear./script.sh
-[?2004lnejimon
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ ./script.sh[6Pclear./script.sh[2Pscript.sh[4Pls -lchmod +x script.sh[6P--help[7Pls -lscript.shdocker image history sampleapp:v1s[K history sampleapp:v1script.sh[K[4Pls -lchmod --help+x script.shls -l[Kscript.sh./script.sh[6Pclear./script.sh[K./script.sh[6Pclear./script.sh[2Pscript.sh[4Pls -lchmod +x script.sh[6P--help[7Pls -lscript.shdocker image history sampleapp:v1s[Kls[Kdocker build -t sampleapp .ls[Kdocker build -t sampleapp .tnet run[Kgoogle-chrome[3Pdotnet runcker build -t sampleapp .ls[Kdocker build -t sampleapp .ls[Kdocker images history sampleapp:v1script.sh[K[4Pls -lchmod --help+x script.shls -l[Kscript.sh./script.sh[6Pclear./script.sh[Khistory
-[?2004l    1  ls
-    2  cd /root
-    3  sudo cd /root
-    4  cd /root
-    5  sudo su
-    6  dotnet
-    7  google-chrome
-    8  sudo apt update
-    9  wget
-   10  sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-   11  sudo dpkg -i google-chrome-stable_current_amd64.deb
-   12  sudo apt install --fix-broken -y
-   13  sudo dpkg -i google-chrome-stable_current_amd64.deb
-   14  google-chrome
-   15  ls
-   16  rm google-chrome-stable_current_amd64.deb
-   17  ls
-   18  clear
-   19  dotnet
-   20  google-chrome
-   21  docker
-   22  clear
-   23  docker
-   24  dotnet
-   25  ls
-   26  pwd
-   27  cd myfiles
-   28  ls
-   29  rmdir *
-   30  ls
-   31  rm *
-   32  ls
-   33  clear
-   34  git
-   35  mkdir projects
-   36  cd projects
-   37  clear
-   38  dotnet
-   39  ls
-   40  sudo apt update
-   41  sudo apt install -h
-   42  sudo apt install -y
-   43  sudo apt install -y dotnet-sdk-6.0
-   44  dotnet
-   45  ls
-   46  dotnet new -h
-   47  dotnet new mvc --name sampleapp --no-https 
-   48  ls
-   49  cd sampleap
-   50  cd sampleapp
-   51  ls
-   52  dotnet sampleapp
-   53  dotnet run sampleapp
-   54  code .
-   55  dotnet run sampleapp
-   56  cd ..
-   57  mkdir github
-   58  cd github
-   59  git clone https://github.com/nejimonraveendran/nejimonraveendran.github.io.git
-   60  ls
-   61  cd nejimonraveendran.github.io
-   62  code .
-   63  cd /
-   64  cd myfiles
-   65  cd /home/nejimon/myfiles
-   66  ls
-   67  cd projects
-   68  ls
-   69  cd sampleapp
-   70  docker
-   71  ls
-   72  cd myfile/projects
-   73  cd myfiles
-   74  ls
-   75  projects
-   76  cd projects
-   77  ls
-   78  cd sampleapp
-   79  ls
-   80  ls -1
-   81  ls [apP]
-   82  ls [apP]*.*
-   83  cat /etc/os-release
-   84  cat /etc/at.deny
-   85  sudo cat /etc/at.deny
-   86  cd ~
-   87  ls
-   88  cd myfiles/projects
-   89  cd sampleapp
-   90  ls -1
-   91  clear
-   92  cd ~
-   93  mkdir --parents parent/gen1/gen2
-   94  cd parent/gen1/gen2
-   95  cd ..; cd..;
-   96  cd ..; cd ..;
-   97  ls
-   98  cd parent2/gen1/gen2 parent3/gen1/gen2
-   99  mkdir parent2/gen1/gen2 parent3/gen1/gen2
-  100  mkdir --parents parent2/gen1/gen2 parent3/gen1/gen2
-  101  ls
-  102  cd parent3
-  103  ls
-  104  cd ~
-  105  ls
-  106  ls p*
-  107  ls
-  108  cd parent/gen1
-  109  cat > text1.txt
-  110  cd .
-  111  cd ..
-  112  clear
-  113  ls *p
-  114  ls p*
-  115  ls
-  116  rmdir p*
-  117  rmdir -r p*
-  118  rmdir -h
-  119  man rmdir
-  120  rm -r p*
-  121  ls
-  122  mkdir test
-  123  rm test
-  124  ls
-  125  rmdir test
-  126  ls
-  127  rmdir test
-  128  mkdir test
-  129  mkdir test2 test3 test4
-  130  ls
-  131  rmdir test test2
-  132  ls
-  133  rm test3 test4
-  134  cd test3
-  135  cat > fkjlfd.txt
-  136  ls
-  137  cd ..
-  138  ls
-  139  rm test3 test4
-  140  rm test3
-  141  rmdir test3
-  142  rm -r test3 test4
-  143  ls
-  144  cat > ff.txt
-  145  rm -i ff.txt
-  146  ls
-  147  rm -i ff.txt
-  148  ls
-  149  clear
-  150  ps
-  151  ps -e
-  152  ps -ef
-  153  ps aux
-  154  w
-  155  W
-  156  clear
-  157  ls
-  158  ps -e
-  159  ps -e > ps.txt
-  160  ls
-  161  cat ps.txt
-  162  ps -e >> ps.txt
-  163  cat ps.txt
-  164  rm ps.txt
-  165  clear
-  166  ls;ls
-  167  cd myfiles/projects/sampleapp
-  168  ls
-  169  ls -1 | more
-  170  more
-  171  ls -a
-  172  cd .
-  173  kill -l
-  174  cd /etc
-  175  ls -1
-  176  ls -1 | more
-  177  cat timezone
-  178  vim
-  179  cler
-  180  clear
-  181  ls | more
-  182  cat cron.d
-  183  ls -l | more
-  184  cat ca-certificates
-  185  ls -1
-  186  cat os-release
-  187  clear
-  188  ls --help
-  189  ls -d
-  190  ls -s
-  191  ls -d
-  192  ls -1
-  193  cat localtime
-  194  clear
-  195  google-chrome
-  196  dotnet run
-  197  docker build -t sampleapp .
-  198  ls
-  199  docker build -t sampleapp .
-  200  ls
-  201  docker images
-  202  docker image history sampleapp:v1
-  203  script.sh
-  204  ls -l
-  205  chmod --help
-  206  chmod +x script.sh
-  207  ls -l
-  208  script.sh
-  209  ./script.sh
-  210  clear
-  211  ./script.sh
-  212  history
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ dc[Kocker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jls
-[1;32mscript.sh[m     [0;0mtestfile.txt[m
-/home # [6n/scri[J[J[J[J[J.scri[J[J[J[J/script/sh[J[J[J.sh
-root
-/home # [6nca [Jt textfile.txt
-cat: can't open 'textfile.txt': No such file or directory
-/home # [6n/home # cat textfile.txt[Jfile.txt[J[8Dfile.txt[J[8Dsfile.txt[8Dtfile.txt[8Dfile.txt
-this is a test file on host/home # [6nclear
-[H[J/home # [6n/home # clear[J/home # cat testfile.txt[J
-this is a test file on host/home # [6n
-/home # [6n/home # cat testfile.txt[J
-this is a test file on host/home # [6n
-/home # [6nclear
-[H[J/home # [6nexit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [.\script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker ps -a
-[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker ps -arun -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [.\script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [.\script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ /scri[K[K[K[K[K/sc[K[K[K.scri[K[K[K[K/script.sh
-[?2004lcat: testfile.txt: No such file or directory
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ cat testfile.txt
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ cat testfile.txt[5P./script.sh
-[?2004lcat: testfile.txt: No such file or directory
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ ./script.sh
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ ./script.shcat testfile.txt[5P./script.shdocker run -it --rm --name myalpine myalpine:v2
-[?2004lexec ./script.sh: exec format error
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmod +x script.sh
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ chmod +x script.shdocker run -it --rm --name myalpine myalpine:v2
-[?2004lexec ./script.sh: exec format error
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2[29Pchmod +x script.shdocker run -it --rm --name myalpine myalpine:v2./script.sh[K
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ ./script.shdocker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ cleardocker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jexit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [./,: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [.//home/script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [./script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [{CURDIR}/script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [/home/script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jcd /
-/ # [6n/home/script.fil[J[J[Jsh
-cat: can't open 'testfile.txt': No such file or directory
-/ # [6n/ # /home/script.sh[J/ # [Jexit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2clear[Kdocker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jscript.sh
-/bin/sh: script.sh: not found
-/home # [6nls
-[1;32mscript.sh[m     [0;0mtestfile.txt[m
-/home # [6n/[J/.[J[J./script/sh
-/bin/sh: ./script/sh: not found
-/home # [6n/home # ./script/sh[J[J[J[J.sh
-this is a test file on host
-/home # [6nclear
-[H[J/home # [6ncd /
-/ # [6n/home/script.sh
-this is a test file on host
-/ # [6nexit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [/home/script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jcd /bin/sh
-/bin/sh: cd: can't cd to /bin/sh: Not a directory
-/home # [6ncd /bin
-/bin # [6nls
-[1;36march[m           [1;36mcp[m             [1;36mfalse[m          [1;36mionice[m         [1;36mls[m             [1;36mmpstat[m         [1;36mpwd[m            [1;36msleep[m          [1;36musleep[m
-[1;36mash[m            [1;36mdate[m           [1;36mfatattr[m        [1;36miostat[m         [1;36mlsattr[m         [1;36mmv[m             [1;36mreformime[m      [1;36mstat[m           [1;36mwatch[m
-[1;36mbase64[m         [1;36mdd[m             [1;36mfdflush[m        [1;36mipcalc[m         [1;36mlzop[m           [1;36mnetstat[m        [1;36mrev[m            [1;36mstty[m           [1;36mzcat[m
-[1;36mbbconfig[m       [1;36mdf[m             [1;36mfgrep[m          [1;36mkbd_mode[m       [1;36mmakemime[m       [1;36mnice[m           [1;36mrm[m             [1;36msu[m
-[1;32mbusybox[m        [1;36mdmesg[m          [1;36mfsync[m          [1;36mkill[m           [1;36mmkdir[m          [1;36mpidof[m          [1;36mrmdir[m          [1;36msync[m
-[1;36mcat[m            [1;36mdnsdomainname[m  [1;36mgetopt[m         [1;36mlink[m           [1;36mmknod[m          [1;36mping[m           [1;36mrun-parts[m      [1;36mtar[m
-[1;36mchattr[m         [1;36mdumpkmap[m       [1;36mgrep[m           [1;36mlinux32[m        [1;36mmktemp[m         [1;36mping6[m          [1;36msed[m            [1;36mtouch[m
-[1;36mchgrp[m          [1;36mecho[m           [1;36mgunzip[m         [1;36mlinux64[m        [1;36mmore[m           [1;36mpipe_progress[m  [1;36msetpriv[m        [1;36mtrue[m
-[1;36mchmod[m          [1;36med[m             [1;36mgzip[m           [1;36mln[m             [1;36mmount[m          [1;36mprintenv[m       [1;36msetserial[m      [1;36mumount[m
-[1;36mchown[m          [1;36megrep[m          [1;36mhostname[m       [1;36mlogin[m          [1;36mmountpoint[m     [1;36mps[m             [1;36msh[m             [1;36muname[m
-/bin # [6ncd sh
-/bin/sh: cd: can't cd to sh: Not a directory
-/bin # [6nsudo cd sh
-/bin/sh: sudo: not found
-/bin # [6n/home/script.sh
-this is a test file on host
-/bin # [6n/bin # /home/script.sh[J/bin # sudo cd sh[J
-/bin/sh: sudo: not found
-/bin # [6ncl[J[Jexis[Jt
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ clear
-[?2004l[H[2J[3J[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ cleardocker run -it --rm --name myalpine myalpine:v2
-[?2004l/home # [6n/home # [Jexit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004ldocker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "./": permission denied: unknown.
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [./script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004l/bin/sh: [./script.sh]: not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004ldocker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "./script.sh": stat ./script.sh: no such file or directory: unknown.
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ docker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ r[Kprintenv
-[?2004lSHELL=/bin/bash
-WSL2_GUI_APPS_ENABLED=1
-WSL_DISTRO_NAME=Ubuntu-22.04
-WT_SESSION=659332cf-20c6-440f-b045-480cc1864719
-DOTNET_ROOT=/usr/lib/dotnet
-NAME=NejSurfacePro
-PWD=/home/nejimon/myfiles/temp/dockertest
-LOGNAME=nejimon
-MOTD_SHOWN=update-motd
-HOME=/home/nejimon
-LANG=C.UTF-8
-WSL_INTEROP=/run/WSL/9_interop
-LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-WAYLAND_DISPLAY=wayland-0
-DOTNET_BUNDLE_EXTRACT_BASE_DIR=/home/nejimon/.cache/dotnet_bundle_extract
-LESSCLOSE=/usr/bin/lesspipe %s %s
-TERM=xterm-256color
-LESSOPEN=| /usr/bin/lesspipe %s
-USER=nejimon
-DISPLAY=:0
-SHLVL=2
-XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
-WSLENV=WT_SESSION::WT_PROFILE_ID
-XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Microsoft SDKs/Azure/CLI2/wbin:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/qemu:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/_MyFiles/Software/ffmpeg/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/nejim/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nejim/.dotnet/tools:/mnt/c/Users/nejim/AppData/Roaming/npm:/mnt/c/Users/nejim/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/nejimon/.dotnet/tools
-HOSTTYPE=x86_64
-PULSE_SERVER=unix:/mnt/wslg/PulseServer
-WT_PROFILE_ID={d7b20cea-47a9-518c-95a4-c8bd91e2e1c6}
-OLDPWD=/home/nejimon/myfiles/temp
-_=/usr/bin/printenv
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ $disp[K[K[K[KDS[KIDSP[K[K[KSPLAN[KY
-[?2004l:0: command not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ $DISPLAY[C[C[C[C[C[C[K[K[K[K[K[K[KUSER
-[?2004lnejimon: command not found
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ printenv $USER
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ echo $USER
-[?2004lnejimon
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ sh
-[?2004l$ echo $USER
-nejimon
-$ exit
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ shecho $USER[4@printenv[C[C[C[C[C[C[9P$USERDISPLAYprintenvdocker run -it --rm --name myalpine myalpine:v2
-[?2004lthis is a test file on host
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ [K]0;nejimon@NejSurfacePro: ~/myfiles/temp/dockertest[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp/dockertest[00m$ cd ..
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/temp[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/temp[00m$ cdd .[K[K[K ..
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles[00m$ ls
-[?2004l[0m[01;34mprojects[0m  [01;34mtemp[0m
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles[00m$ mkdir git[K[K[KH[KGitHub[K[K[K[K[K[Kgithub
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles[00m$ cd github
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github[00m$ git clone [7mhttps://github.com/nejimonraveendran/DockerFundas.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chttps://github.com/nejimonraveendran/DockerFundas.git
-[?2004lCloning into 'DockerFundas'...
-remote: Enumerating objects: 6, done.[K
-remote: Counting objects:  16% (1/6)[Kremote: Counting objects:  33% (2/6)[Kremote: Counting objects:  50% (3/6)[Kremote: Counting objects:  66% (4/6)[Kremote: Counting objects:  83% (5/6)[Kremote: Counting objects: 100% (6/6)[Kremote: Counting objects: 100% (6/6), done.[K
-remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0[K
-Receiving objects:  16% (1/6)Receiving objects:  33% (2/6)Receiving objects:  50% (3/6)Receiving objects:  66% (4/6)Receiving objects:  83% (5/6)Receiving objects: 100% (6/6)Receiving objects: 100% (6/6), done.
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github[00m$ s[Kls
-[?2004l[0m[01;34mDockerFundas[0m
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github[00m$ cd dockerfundas
-[?2004lbash: cd: dockerfundas: No such file or directory
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github[00m$ cd DockerFundas
-[?2004l[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github/DockerFundas[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github/DockerFundas[00m$ ls
-[?2004lREADME.md
-[?2004h]0;nejimon@NejSurfacePro: ~/myfiles/github/DockerFundas[01;32mnejimon@NejSurfacePro[00m:[01;34m~/myfiles/github/DockerFundas[00m$ cp --hep[Klp
-[?2004lUsage: cp [OPTION]... [-T] SOURCE DEST
-  or:  cp [OPTION]... SOURCE... DIRECTORY
-  or:  cp [OPTION]... -t DIRECTORY SOURCE...
-Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
-
-Mandatory arguments to long options are mandatory for short options too.
-  -a, --archive                same as -dR --preserve=all
-      --attributes-only        don't copy the file data, just the attributes
-      --backup[=CONTROL]       make a backup of each existing destination file
-  -b                           like --backup but does not accept an argument
-      --copy-contents          copy contents of special files when recursive
-  -d                           same as --no-dereference --preserve=links
-  -f, --force                  if an existing destination file cannot be
-                                 opened, remove it and try again (this option
-                                 is ignored when the -n option is also used)
-  -i, --interactive            prompt before overwrite (overrides a previous -n
-                                  option)
-  -H                           follow command-line symbolic links in SOURCE
-  -l, --link                   hard link files instead of copying
-  -L, --dereference            always follow symbolic links in SOURCE
-  -n, --no-clobber             do not overwrite an existing file (overrides
-                                 a previous -i option)
-  -P, --no-dereference         never follow symbolic links in SOURCE
-  -p                           same as --preserve=mode,ownership,timestamps
-      --preserve[=ATTR_LIST]   preserve the specified attributes (default:
-                                 mode,ownership,timestamps), if possible
-                                 additional attributes: context, links, xattr,
-                                 all
-      --no-preserve=ATTR_LIST  don't preserve the specified attributes
-      --parents                use full source file name under DIRECTORY
-  -R, -r, --recursive          copy directories recursively
-      --reflink[=WHEN]         control clone/CoW copies. See below
-      --remove-destination     remove each existing destination file before
-                                 attempting to open it (contrast with --force)
-      --sparse=WHEN            control creation of sparse files. See below
-      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
-                                 argument
-  -s, --symbolic-link          make symbolic links instead of copying
-  -S, --suffix=SUFFIX          override the usual backup suffix
-  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
-  -T, --no-target-directory    treat DEST as a normal file
-  -u, --update                 copy only when the SOURCE file is newer
-                                 than t
