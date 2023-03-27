@@ -1,4 +1,4 @@
-#set a variable for defining version of my app.
+#ARG is sometimes useful to use as a variable to be used in the FROM command.  Note it cannot be used as a generic variable beyond that.
 ARG ALPINE_VERSION=latest 
 
 #define base image.  If exists locally, it is pulled from there.  If not, it is pulled from DockerHub by default.  
