@@ -1,4 +1,4 @@
-# Docker Fundamentals
+# Docker Samples
 This repo is a collection of the artifacts (guides, Dockerfile boilerplate templates, demo code, etc) that can be readily used when containerizing applications using Docker.  The artifacts are organized into folders.  
 
 Note:  Look inside the folders in this repo for examples. So far I have added the following folders:
