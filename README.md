@@ -1,4 +1,5 @@
-# Docker Cheat Sheet
+# Docker Fundamentals
+This repo is collection of the artifacts from my Docker learning.  The artifacts are organized into folders.  
 
 Note:  Look inside the folders in this repo for examples. So far I have added the following folders:
 - **[alpinedemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/alpinedemo):** This demonstrates a Dockerfile with most frequenly used commands.
@@ -6,7 +7,7 @@ Note:  Look inside the folders in this repo for examples. So far I have added th
 
 
 
-### Command:
+### Most used run command:
 The most handy command: ```docker run -it --rm --name mywebapp -e UNAME=Nejimon -d -p 8080:80 nginx:latest```.  This command:
 - Runs the container in interactive mode
 - Removes the container after exit
@@ -16,7 +17,7 @@ The most handy command: ```docker run -it --rm --name mywebapp -e UNAME=Nejimon 
 - Runs on port 80 and maps it to the host port 8080.
 
 
-### Command reference:
+### Command cheat sheet:
 | Command | Purpose | Notes |
 | --- | --- | --- |
 | ```docker images``` | Lists all images on the local system |   |
