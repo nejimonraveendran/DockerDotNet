@@ -1,10 +1,9 @@
 # Docker Fundamentals
-This repo is collection of the artifacts from my Docker learning.  The artifacts are organized into folders.  
+This repo is a collection of the artifacts (guides, Dockerfile boilerplate templates, demo code, etc) that can be readily used when containerizing applications using Docker.  The artifacts are organized into folders.  
 
 Note:  Look inside the folders in this repo for examples. So far I have added the following folders:
 - **[alpinedemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/alpinedemo):** This demonstrates a Dockerfile with most frequenly used commands.
 - **[dotnetdemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/dotnetdemo):** This demonstrates a multi-stage build with Dockerfile.
-
 
 
 ### Most used run command:
