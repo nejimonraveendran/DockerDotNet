@@ -37,3 +37,14 @@ CMD ["sh", "./script.sh"]
 #ENTRYPOINT ["./script.sh"]
 
 ```
+
+Build the image:
+```bash
+docker build -t alpinedemo:v1 .
+```
+
+Run the container:
+```bash
+docker run -it --rm alpinedemo:v1
+```
+
