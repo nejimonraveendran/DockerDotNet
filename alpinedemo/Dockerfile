@@ -5,11 +5,12 @@ ARG ALPINE_VERSION=latest
 #you can also specify fully qualified domain name of the registry.  Eg: mcr.microsoft.com/dotnet/aspnet:7.0
 FROM alpine:${ALPINE_VERSION}
 
+#defines an ARG variable.  Unlike the ARG above, Since this is defined after FROM, it can be used as a generic variable.   
+ARG CURDIR=/home
+
 #defines an environment variable inside the container
-ENV CURDIR=/home
 ENV SCRIPTFILE=script.sh
 ENV SOURCEFILE=testfile.txt
-
 
 #copy a file from host to container.  
 #To copy all files from current host dir to the /home dir on the container, use:  COPY . /home 
