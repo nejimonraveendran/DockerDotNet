@@ -15,10 +15,34 @@ There are 2 types of storage mounts:
 **Named Volume mount example:**
 The following example shows a volume mount:
 ```bash
-#create volume.  This is an itempotent command 
+#create volumes.  This is an itempotent command 
 docker volume create test-volume 
+docker volume create sql-log-volume
+docker volume create sql-secrets-volume
 
+#run official SQL server image: Syntax 1 (using -v option for mounting)  
+docker run --user root -it --rm  \
+  -e ACCEPT_EULA=Y \
+  -e MSSQL_SA_PASSWORD=Admin@123 \
+  -p 1433:1433 \
+  --name dockersql \
+  --hostname dockersql \
+  -v sql-data-volume:/var/opt/mssql/data \
+  -v sql-log-volume/var/opt/mssql/log \
+  -v sql-secrets-volume:/var/opt/mssql/secrets \
+  mcr.microsoft.com/mssql/server:2022-latest
 
+#run official SQL server image: Syntax 2 (using --mount option for mounting)  
+docker run --user root -it --rm  \
+  -e ACCEPT_EULA=Y \
+  -e MSSQL_SA_PASSWORD=Admin@123 \
+  -p 1433:1433 \
+  --name dockersql \
+  --hostname dockersql \
+  --mount type=volume,src=sql-data-volume,target=/var/opt/mssql/data \
+  --mount type=volume,src=sql-log-volume,target=/var/opt/mssql/log \
+  --mount type=volume,src=sql-secrets-volume,target=/var/opt/mssql/secrets \
+  mcr.microsoft.com/mssql/server:2022-latest
 ```
 
 
