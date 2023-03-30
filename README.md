@@ -3,7 +3,8 @@ This repo is a collection of artifacts (guides, Dockerfile boilerplate templates
 
 Note:  Look inside the folders in this repo for examples. So far I have added the following folders:
 - **[alpinedemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/alpinedemo):** This demonstrates a Dockerfile with most frequenly used commands.
-- **[dotnetdemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/dotnetdemo):** This demonstrates a multi-stage build with Dockerfile.
+- **[multistage_dotnetdemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/dotnetdemo):** This demonstrates a multi-stage build with Dockerfile.
+- **[volumes_sqlserverdemo](https://github.com/nejimonraveendran/DockerSamples/tree/main/sqlserverdemo):** This demonstrates a the user of named volumes and bind mounts with a SQL Server container on Linux.
 
 
 ### Most used run command:
