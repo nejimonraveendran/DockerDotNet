@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Docker .NET Debug",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",  //runs a task defined in tasks.json ("label": "docker-run: debug")
+            "netCore": {
+                "appProject": "${workspaceFolder}/dotnetdemo.csproj"
+            }
+        }
+    ]
+}
