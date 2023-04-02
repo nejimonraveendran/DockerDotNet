@@ -112,16 +112,31 @@ ENTRYPOINT ["dotnet", "dotnetdemo.dll"]
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/dotnetdemo.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+
+        {
             "type": "docker-build",
             "label": "docker-build: debug",
+            "dependsOn": [
+                "build"
+            ],
             "dockerBuild": {
                 "tag": "dotnetdemo:dev",
                 "target": "debug",  //must match the STAGE 1 definition in Dockerfile
                 "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}",
-                "pull": true //pulls required images if needed. 
+                "pull": true
             },
-            
             "netCore": {
                 "appProject": "${workspaceFolder}/dotnetdemo.csproj"
             }
@@ -134,16 +149,16 @@ ENTRYPOINT ["dotnet", "dotnetdemo.dll"]
             "dependsOn": [
                 "docker-build: debug" //must complete build task first (i.e., "label": "docker-build: debug").
             ],
-
             //define static ports to be used. By default, vs code switches to different host port on each run
-            "dockerRun": { "ports": [
+            "dockerRun": { 
+                "containerName": "dotnetdemo-dev",
+                "ports": [
                 {
                     "containerPort": 5000, //this should match the ASPNETCORE_URLS port definition in Dockerfile
                     "hostPort": 5000,
                     "protocol": "tcp"
                 }
             ]},
-
             "netCore": {
                 "appProject": "${workspaceFolder}/dotnetdemo.csproj",
                 "enableDebugging": true
