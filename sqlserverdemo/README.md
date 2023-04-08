@@ -16,7 +16,7 @@ There are 2 types of storage mounts:
 The following example shows a volume mount:
 ```bash
 #create volumes.  This is an itempotent command 
-docker volume create test-volume 
+docker volume create sql-data-volume 
 docker volume create sql-log-volume
 docker volume create sql-secrets-volume
 
