@@ -64,7 +64,7 @@ services:
       target: build
 
   terminal:
-    image: alpine:latest
+    image: ubuntu:latest
     networks:
       - nw-frontend
       - nw-backend

@@ -50,7 +50,7 @@ CD into Web APP and Demon App directories, and add reference to DAL: ```dotnet a
     - run DB server
     - run the web app and the console app
     - apply latest DB migration
-    - start an Alpine-based terminal (helpful for admin tasks)
+    - start an Linux terminal (helpful for admin tasks)
 - **docker-compose-prod.yml**:  Production version of the compose file.
 
 

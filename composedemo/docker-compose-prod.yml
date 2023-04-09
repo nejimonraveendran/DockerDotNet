@@ -20,6 +20,21 @@ services:
       dockerfile: webapp/Dockerfile
       target: final
   
+  demonapp:
+    hostname: demonapp
+    networks:
+      - nw-frontend
+      - nw-backend
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - DBCONNECTION=Server=dbserver;Database=MyDb;User Id=sa;Password=Admin@123;
+    depends_on:
+      - dbserver
+    build:
+      context: .
+      dockerfile: demonapp/Dockerfile
+      target: final  
+  
   dbserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     hostname: dbserver
@@ -49,7 +64,7 @@ services:
       target: build
 
   terminal:
-    image: alpine:latest
+    image: ubuntu:latest
     networks:
       - nw-frontend
       - nw-backend
