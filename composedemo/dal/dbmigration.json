@@ -1,0 +1,5 @@
+{
+    "ConnectionStrings":{
+        "MyAppDb": "Server=127.0.0.1,2433;Database=MyDb;User Id=sa;Password=Admin@123"
+    }
+}

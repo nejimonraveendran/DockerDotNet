@@ -1,0 +1,36 @@
+name: myapp-dev
+
+version: '3.9'
+
+services:      
+  dbserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    hostname: dbserver
+    networks:
+      - nw-backend    
+    ports:
+      - 2433:1433    
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Admin@123
+    volumes:
+      - /var/local/appdata/myapp/dev/sql/2022/data:/var/opt/mssql/data
+      - /var/local/appdata/myapp/dev/sql/2022/log:/var/opt/mssql/log
+      - /var/local/appdata/myapp/dev/sql/2022/secrets:/var/opt/mssql/secrets
+  
+  migration:
+    hostname: migration
+    networks: 
+      - nw-backend
+    environment:
+      - DBCONNECTION=Server=dbserver;Database=MyDb;User Id=sa;Password=Admin@123;
+    depends_on:
+      - dbserver
+    build:
+      context: .
+      dockerfile: dal/Dockerfile
+      target: build
+
+networks:
+  nw-frontend:
+  nw-backend:

@@ -1,0 +1,27 @@
+﻿@model IList<webapp.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Products";
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+</div>
+
+<div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+        </thead>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ProductName</td>
+            </tr>
+        }
+    </table>
+</div>

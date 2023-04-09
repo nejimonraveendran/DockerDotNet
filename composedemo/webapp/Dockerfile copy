@@ -1,0 +1,31 @@
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+
+ARG PORT=5000
+
+EXPOSE ${PORT}
+
+ENV ASPNETCORE_URLS=http://+:${PORT}
+ENV ASPNETCORE_ENVIRONMENT=Development
+
+# Creates a non-root user with an explicit UID and adds permission to access the /app folder
+# For more info, please refer to https://aka.ms/vscode-docker-dotnet-configure-containers
+# RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
+# USER appuser
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["webapp/webapp.csproj", "webapp/"]
+RUN dotnet restore "webapp/webapp.csproj"
+COPY . .
+WORKDIR "/src/webapp"
+#ARG BuildMode=Debug
+RUN dotnet build "webapp.csproj" -c Debug -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "webapp.csproj" -c Debug -o /app/publish /p:UseAppHost=false
+
+FROM base AS prod
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "webapp.dll"]
