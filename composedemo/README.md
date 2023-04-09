@@ -12,13 +12,13 @@ Make sure the following VS Code extensions are installed:
 - Docker extension
 - WSL
 
-If the SQL server container has never been run on the system before, do the following:
+If the SQL server container has never been run on the dev system before, do the following:
 ```bash
 #create directory structure on host
-mkdir -p /var/local/sql/2022    
+mkdir -p /var/local/appdata/myapp/dev/sql/2022/    
 
 #set read, write, special execute permission on the directory on host for all users
-sudo chmod --recursive a+rwX /var/local/sql/2022
+sudo chmod --recursive a+rwX /var/local/appdata/myapp/dev/sql/
 ```
 
 ### Project creation:
