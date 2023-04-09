@@ -6,6 +6,29 @@ This document demonstrates how to run multiple containers using Docker Compose. 
 - Keep different docker compose files for each environment.
 - If desired, use the regular VS Code built-in debugger (F5)
 
+### Prequisites:
+Make sure the following VS Code extensions are installed:
+- C# extension
+- Docker extension
+- WSL
+
+If the SQL server container has never been run on the system before, do the following:
+```bash
+#create directory structure on host
+mkdir -p /var/local/sql/2022    
+
+#set read, write, special execute permission on the directory on host for all users
+sudo chmod --recursive a+rwX /var/local/sql/2022
+```
+
+### Project creation:
+- Web App: ```dotnet new mvc --name webapp --no-https```
+- Demon App: ```dotnet new console --name demonapp```
+- DAL: ```dotnet new classlib --name dal```
+
+CD into Web APP and Demon App directories, and add reference to DAL: ```dotnet add reference ../dal/dal.csproj```
+
+
 ### Highlights:
 - The *.vscode/lanch.json* contains the launch configurations for local debugging as well as Docker run/debugging.
 - The *.vscode/tasks.json* contains additional tasks for build/debug
@@ -29,14 +52,6 @@ This document demonstrates how to run multiple containers using Docker Compose. 
     - apply latest DB migration
     - start an Alpine-based terminal (helpful for admin tasks)
 - **docker-compose-prod.yml**:  Production version of the compose file.
-
-
-### Project creation:
-- Web App: ```dotnet new mvc --name webapp --no-https```
-- Demon App: ```dotnet new console --name demonapp```
-- DAL: ```dotnet new classlib --name dal```
-
-CD into Web APP and Demon App directories, and add reference to DAL: ```dotnet add reference ../dal/dal.csproj```
 
 
 ### Running the Project in DEV:
