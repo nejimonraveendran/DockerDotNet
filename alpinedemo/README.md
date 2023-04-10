@@ -17,7 +17,7 @@ ENV SCRIPTFILE=script.sh
 ENV SOURCEFILE=testfile.txt
 
 #copy a file from host to container.  
-#To copy all files from current host dir to the /home dir on the container, use:  COPY . /home 
+#To copy all files from current host dir (relative to where the docker build commad is executed from, not relative to the Dockerfile location) to the /home dir on the container, use:  COPY . /home 
 COPY ${SOURCEFILE} ${CURDIR}/${SOURCEFILE}
 
 COPY ${SCRIPTFILE} ${CURDIR}/${SCRIPTFILE}
