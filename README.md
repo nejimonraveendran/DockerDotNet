@@ -43,7 +43,51 @@ The most handy command: ```docker run -it --rm --name mywebapp -e UNAME=Nejimon 
 | ```docker exec <container_name> <command>``` | Executes a command on the running container | Eg: ```docker exec ubuntu_id cat > /etc/hosts```  |
 
 
+### Essential Dockerfile Explained
 
+```dockerfile
+# ARG is sometimes useful to use as a variable to be used in the FROM command.  
+# Note ARG defined before FROM cannot be used as a generic variable beyond FROM satement.
+ARG ALPINE_VERSION=latest 
+
+# Define base image (aka build stage).  If image exists locally, it is pulled from there.  If not, it is pulled from DockerHub by default.  
+# You can also specify fully qualified domain name of the registry.  Eg: mcr.microsoft.com/dotnet/aspnet:7.0
+FROM alpine:latest AS base
+
+# Define an ARG variable within the scope of the build stage.  
+# Unlike the ARG above, Since this is defined after FROM, it can be used as a generic variable.   
+ARG CURDIR=/home
+
+# defines an environment variable inside the container.  Quotation marks will not be included in the value read.
+ENV CONNECTION_STRING="Connection String"
+
+# set the working directory inside the container.  If the directory does not exist, it is created
+WORKDIR /src
+
+# copy everything in the path from host to the specified path in the container.
+# note that the source path is determined relative to where the Docker build command is executed, NOT relative to where the Dockerfile is.
+# if the directory structure does not exist in the container, it is automatically created.
+COPY ["/host/path/to/", "/container/path/to/"]
+
+
+#run a command inside the container during the BUILD (the available commands depends on the underlying image.  In this eg., alpine).
+RUN dotnet tool install --global dotnet-ef
+
+# entrypoint
+#CMD is used to execute a command during the START of the container to provide defaults.  Only one CMD is allowed per docker file.
+# it can be executed as shell form (using shell) or directly
+# format (exec form): CMD ["command", "param1", "param2"]
+# format (shell form): CMD command param1 param2
+
+# trick to keep certain containers (eg. alpine) running.  Use "bash" for Ubuntu. 
+CMD ["sh", "tail -F anything"] 
+
+#alternative to CMD.
+#exec form: ENTRYPOINT ["executable", "param1", "param2"]  or  ENTRYPOINT command param1 param2 
+#shell form: ENTRYPOINT command param1 param2
+ENTRYPOINT ["sh", "tail -F anything"] 
+
+```
 
 
 
