@@ -1,4 +1,4 @@
-## Multi-container setup using Docker Compose with debugging capabilities
+## Multi-container setup using Docker Compose with debugging capabilities - VS Code
 
 This document demonstrates how to run multiple containers using Docker Compose.  In this:
 - Run all containers using Docker Compose
