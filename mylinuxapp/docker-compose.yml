@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+    webapi:
+        hostname: webapi
+        container_name: webapi
+        depends_on: 
+            - dbserver
+        networks:
+            - nw-frontend
+            - nw-backend
+        ports:
+            - 5000:80
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - DBCONNECTION=Server=dbserver;Database=MyDb;User Id=sa;Password=Admin@123;
+        build:
+            context: .
+            dockerfile: webapi/Dockerfile
+            target: final
+    demonapp:
+        hostname: demonapp
+        container_name: demonapp
+        depends_on: 
+            - dbserver
+        networks:
+            - nw-frontend
+            - nw-backend
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - DBCONNECTION=Server=dbserver;Database=MyDb;User Id=sa;Password=Admin@123;
+        build:
+            context: .
+            dockerfile: demonapp/Dockerfile
+            target: final
+    dbserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: dbserver
+        hostname: dbserver
+        networks:
+            - nw-backend
+        ports:
+            - 2433:1433
+        environment:
+            - ACCEPT_EULA=Y
+            - MSSQL_SA_PASSWORD=Admin@123
+        volumes:
+            - c:/tmp/appdata/sql/data:/var/opt/mssql/data
+            - c:/tmp/appdata/sql/log:/var/opt/mssql/log
+            - c:/tmp/appdata/sql/secrets:/var/opt/mssql/secrets
+networks:
+    nw-frontend:
+    nw-backend:
