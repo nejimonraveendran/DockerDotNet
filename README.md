@@ -6,7 +6,8 @@ Note:  Look inside the folders in this repo for examples. So far I have added th
 - **[multistage_dotnetdemo](https://github.com/nejimonraveendran/DockerFundas/tree/main/dotnetdemo):** This demonstrates a multi-stage build with Dockerfile.
 - **[volumes_sqlserverdemo](https://github.com/nejimonraveendran/DockerSamples/tree/main/sqlserverdemo):** This demonstrates the use of named volumes and bind mounts with a SQL Server container on Linux.
 - **[debug_release_demo](https://github.com/nejimonraveendran/DockerSamples/tree/main/debug_release_demo):** This demonstrates how to use the same Dockerfile in C# app for debugging and production phases, using multi-stage build.
-- **[multi_container_compose_demo](https://github.com/nejimonraveendran/DockerSamples/tree/main/composedemo):** This demonstrates how to use Docker Compose for development, debugging, production, etc.  Contains 2 .NET apps and a SQL DB 
+- **[multi_container_compose_demo](https://github.com/nejimonraveendran/DockerSamples/tree/main/composedemo):** This demonstrates how to use Docker Compose for development, debugging, production, etc.  Contains 2 .NET apps and a SQL DB - using VS Code 
+- **[multi_container_compose_demo_VS2022](https://github.com/nejimonraveendran/DockerDotNet/tree/main/multi_container_compose_vs2022):** This demonstrates how to use Docker Compose for development, debugging, production, etc.  Contains 2 .NET apps and a SQL DB - using Visual Studio 2022
 
 
 ### Most used run command:
