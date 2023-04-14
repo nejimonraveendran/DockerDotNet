@@ -45,9 +45,9 @@ services:
             - ACCEPT_EULA=Y
             - MSSQL_SA_PASSWORD=Admin@123
         volumes:
-            - c:/tmp/dockerapps/sql/data:/var/opt/mssql/data
-            - c:/tmp/dockerapps/sql/log:/var/opt/mssql/log
-            - c:/tmp/dockerapps/sql/secrets:/var/opt/mssql/secrets
+            - /var/local/appdata/myapp/dev/sql/2022/data:/var/opt/mssql/data
+            - /var/local/appdata/myapp/dev/sql/2022/log:/var/opt/mssql/log
+            - /var/local/appdata/myapp/dev/sql/2022/secrets:/var/opt/mssql/secrets
 networks:
     nw-frontend:
     nw-backend:
